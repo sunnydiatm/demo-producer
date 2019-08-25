@@ -1,0 +1,28 @@
+{
+  "namespace" : "com.example.consumer.democonsumer.api",
+  "type" : "record",
+  "name" : "Sensor",
+  "fields" : [
+    {
+        "name" : "metadata",
+        "type" : {
+            "name" : "metadata",
+            "type" : "record",
+             "fields" : [
+                  {"name":"version","type":"string"},
+                  {"name":"type","type":"string"},
+                  {"name":"source","type":"string"},
+                  {"name":"correlationid","type":"string"},
+                  {"name":"time","type":"string"}
+                 ]
+        }
+    },
+    {"name":"id","type":"string"},
+    {"name":"internalTemperature", "type":"float", "default":0.0, "aliases":["temperature"]},
+    {"name":"externalTemperature", "type":"float", "default":0.0},
+    {"name":"acceleration", "type":"float","default":0.0},
+    {"name":"velocity","type":"float","default":0.0},
+    {"name":"accelerometer","type":"float","default":0.0},
+    {"name":"velocity","type":"float","default":0.0}
+  ]
+}

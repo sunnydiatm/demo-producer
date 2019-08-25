@@ -1,0 +1,9 @@
+server.port: 9011
+#spring.cloud.stream.bindings.input.destination: sensor-topic
+#spring.cloud.stream.bindings.input.contentType: application/*+avro
+spring.cloud.stream.bindings.output.destination: sensor-topic
+#spring.cloud.stream.bindings.output.producer.useNativeEncoding: true
+
+spring.cloud.stream.kafka.bindings.output.producer.configuration.value.serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+spring.cloud.stream.kafka.bindings.output.producer.configuration.schema.registry.url: http://localhost:8081
+
